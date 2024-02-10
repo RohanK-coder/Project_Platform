@@ -1,5 +1,4 @@
 import React from 'react'
-import { Login } from './components/Login/Login'
 
 export default function Navigation() {
   return (
@@ -26,9 +25,7 @@ export default function Navigation() {
        </div>
       </div>      
         
-      <div>
-        <Login/>
-      </div>
+      <div id="login"><a href="/login">Login</a></div>
       
         
     </nav>

@@ -10,6 +10,7 @@ import Chal from './pages/Chal';
 import Home from './pages/Home';
 import Navigation from './Navigation';
 import Signup from './components/Signup/Signup';
+import Login from './components/Login/my';
 
 export default function App() {
   return (
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="/collaborate" element={<Collaborate />} />
           <Route path="/post-challenges" element={<Chal />} />
           <Route path="/signup" element={<Signup/>} />
+          <Route path="/login" element={<Login/>} />
           
         </Routes>
         <Footer />
