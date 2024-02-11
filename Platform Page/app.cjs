@@ -1,5 +1,6 @@
 const express = require("express")
 const collection = require("./mongo.cjs")
+const GC = require("./mongo.cjs")
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -44,7 +45,17 @@ app.post("/signup", async (req, res) => {
     }
 });
 
-  
+app.get("/api/details", async (req, res) => {
+    try {
+      const details = await GC.find();
+      res.json(details);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json("error");
+    }
+  });  
+
+
 app.listen(8000,()=>{
     console.log("port connected");
 })

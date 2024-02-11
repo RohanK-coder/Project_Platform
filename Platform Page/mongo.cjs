@@ -1,6 +1,6 @@
 const mongoose=require("mongoose")
 
-mongoose.connect('mongodb+srv://srinaini:Srinaini2102@cluster0.zzv7oog.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://Srinaini:srinaini2021@cluster0.wxkfolf.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
 })
 .then(() => {
@@ -11,7 +11,7 @@ mongoose.connect('mongodb+srv://srinaini:Srinaini2102@cluster0.zzv7oog.mongodb.n
 });
 
 
-const newSchema=new mongoose.Schema({
+const loginSchema=new mongoose.Schema({
     username:{
         type:String,
         required:true
@@ -26,6 +26,24 @@ const newSchema=new mongoose.Schema({
     }
 })
 
-const collection = mongoose.model("collection",newSchema)
+const GCSchema=new mongoose.Schema({
+    title:{
+        type:String,
+        required:true
+    },
+    content:{
+        type:String,
+        required:true
+    },
+    imageUrl:{
+        type:String,
+        required:true
+    }
+})
+
+
+const collection = mongoose.model("collection",loginSchema)
+const GC = mongoose.model("GC", GCSchema)
 
 module.exports=collection
+module.exports=GC
