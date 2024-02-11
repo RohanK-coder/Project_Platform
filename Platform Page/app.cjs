@@ -22,23 +22,29 @@ app.post("/login",async(req,res)=>{
     }
 })
 
+app.post("/signup", async (req, res) => {
+    const { username, email, password } = req.body;
 
-app.get("/addUser", async (req, res) => {
     try {
-        let email="kancharlavenkat1234@gmail.com";
-        let password="12345678";
+        const existingUser = await collection.findOne({
+            $or: [{ username: username }, { email: email }],
+        });
 
-        // Create a new instance of the Collection model
-        const newUser = new collection({ email, password });
+        if (existingUser) {
+            return res.json("exist");
+        }
 
-        // Save the new user to the database
+        const newUser = new collection({ username, email, password });
+
         const savedUser = await newUser.save();
+        res.json("success");
     } catch (error) {
-        console.error('Error adding user:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
+        console.error(error);
+        res.status(500).json("error");
     }
 });
 
+  
 app.listen(8000,()=>{
     console.log("port connected");
 })

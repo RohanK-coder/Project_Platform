@@ -12,6 +12,10 @@ mongoose.connect('mongodb+srv://srinaini:Srinaini2102@cluster0.zzv7oog.mongodb.n
 
 
 const newSchema=new mongoose.Schema({
+    username:{
+        type:String,
+        required:true
+    },
     email:{
         type:String,
         required:true
