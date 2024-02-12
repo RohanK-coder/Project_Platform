@@ -28,17 +28,32 @@ const loginSchema=new mongoose.Schema({
 
 const GCSchema=new mongoose.Schema({
     title:{
-        type:String,
-        required:true
-    },
-    content:{
-        type:String,
-        required:true
+        type:String
     },
     imageUrl:{
-        type:String,
-        required:true
-    }
+        type:String
+    },
+    sector:{
+        type:String
+    },
+    keywords:{
+        type:String
+    },
+    followedBy:{
+        type:String
+    },
+    cc:{
+        type:String
+    },
+    cd:{
+        type:String
+    },
+    impact:{
+        type:String
+    },
+    village:{
+        type:String
+    },
 })
 
 

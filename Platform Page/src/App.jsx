@@ -5,6 +5,7 @@ import GC from './pages/GC';
 import Projects from './pages/Projects';
 import Technologies from './pages/Technologies';
 import Collaborate from './pages/Collaborate';
+import GCInsideNoLogin from './components/Grand Challenges/GCInsideNoLogin';
 
 import Chal from './pages/Chal';
 import Home from './pages/Home';
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/post-challenges" element={<Chal />} />
           <Route path="/signup" element={<Signup/>} />
           <Route path="/login" element={<Login/>} />
+          <Route path="/details/:id" element={<GCInsideNoLogin />} />
           
         </Routes>
         <Footer />

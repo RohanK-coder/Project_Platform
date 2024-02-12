@@ -57,7 +57,24 @@ app.get("/api/details", async (req, res) => {
       console.error(error);
       res.status(500).json("error");
     }
-  });  
+  });
+  
+app.get("/api/details/:id", async (req, res) => {
+   const challengeId = req.params.id;
+  
+   try {
+     const details = await GC.findById(challengeId);
+ 
+     if (!details) {
+       return res.status(404).json({ error: "Challenge not found" });
+    }
+  
+    res.json(details);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json({ error: "Internal server error" });
+    }
+  });
 
 
 app.listen(8000,()=>{
