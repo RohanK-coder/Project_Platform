@@ -5,7 +5,7 @@ import GC from './pages/GC';
 import Projects from './pages/Projects';
 import Technologies from './pages/Technologies';
 import Collaborate from './pages/Collaborate';
-import GCInsideNoLogin from './components/Grand Challenges/GCInsideNoLogin';
+import GCInsideNoLogin from './components/Grand Challenges/GCPageInsideLogin';
 
 import Chal from './pages/Chal';
 import Home from './pages/Home';

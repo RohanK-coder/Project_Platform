@@ -54,6 +54,12 @@ const GCSchema=new mongoose.Schema({
     village:{
         type:String
     },
+    reference:{
+        type:String
+    },
+    express:{
+        type:String
+    }
 })
 
 
