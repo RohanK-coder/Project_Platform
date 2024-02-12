@@ -45,5 +45,7 @@ const GCSchema=new mongoose.Schema({
 const collection = mongoose.model("collection",loginSchema)
 const GC = mongoose.model("GC", GCSchema)
 
-module.exports=collection
-module.exports=GC
+module.exports = {
+    collection: collection,
+    GC: GC
+};

@@ -1,6 +1,6 @@
 const express = require("express")
-const collection = require("./mongo.cjs")
-const GC = require("./mongo.cjs")
+const jwt = require("jsonwebtoken");
+const { collection, GC } = require("./mongo.cjs")
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -11,8 +11,12 @@ app.post("/login",async(req,res)=>{
     const{email,password}=req.body
     try{
         const check=await collection.findOne({email:email,password:password})
+        
         if(check){
-            res.json("exist")
+            const mail = { email };
+            const accessToken = jwt.sign(mail, 'your-secret-key');
+            console.log(accessToken)
+            res.json({ accessToken });
         }
         else{
             res.json("notexist")
