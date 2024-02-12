@@ -6,6 +6,7 @@ import {
   TabsBody,
   Tab,
   TabPanel,
+  TabsHeader,
 } from "@material-tailwind/react";
 
 export default function GCPageInsideLogin() {
@@ -68,11 +69,13 @@ export default function GCPageInsideLogin() {
       <div className='tabs-gc'>
         {tabsArray.length > 0 && (
           <Tabs id="custom-animation" value={id}>
+            <TabsHeader>
             {tabsArray.map(({ label, value }) => (
               <Tab key={value} value={value}>
                 {label}
               </Tab>
             ))}
+            </TabsHeader>
             <TabsBody
               animate={{
                 initial: { y: 250 },
