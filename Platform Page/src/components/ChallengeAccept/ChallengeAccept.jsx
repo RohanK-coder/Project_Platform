@@ -1,11 +1,54 @@
-import React from 'react'
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { PhotoIcon } from '@heroicons/react/24/solid';
+import axios from "axios";
+
 export default function ChallengeAccept() {
+  const [value, setValue] = React.useState("react");
+  const history = useNavigate();
+  const [email, setMail] = useState('');
+  const [country, setCountry] = useState('Agriculture');
+  const [title, setTitle] = useState('');
+  const [summary, setSummary] = useState('');
+  const [details, setDetails] = useState('');
+  const [impact, setImpact] = useState('');
+  const [image, setImage] = useState('');
+  
+
+  async function submit(e) {
+    e.preventDefault();
+  
+    try {
+      const response = await axios.post("http://localhost:8000/api/challenges", {
+        email,
+        sector: country,
+        title,
+        summary,
+        details,
+        impact,
+        image
+      });
+  
+      if (response.status === 200) {
+        if (response.data.status === "exist") {
+          console.log(response.data);
+        } else if (response.data.status === "success") {
+          alert("Submission successful!");
+        }
+      } else {
+        console.error("Failed to submit challenge");
+      }
+    } catch (error) {
+      console.error("Error submitting challenge:", error);
+    }
+  }
+  
+
   return (
     <>
       <section className='chal-accept'>
         <h1>Post Challenge Form</h1>
-      <form>
+      <form onSubmit={submit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           
@@ -23,6 +66,7 @@ export default function ChallengeAccept() {
                     name="email"
                     id="email"
                     autoComplete="email"
+                    onChange={(e) => setMail(e.target.value)}
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                     placeholder=""
                   />
@@ -38,6 +82,7 @@ export default function ChallengeAccept() {
                   id="country"
                   name="country"
                   autoComplete="country-name"
+                  onChange={(e) => setCountry(e.target.value)}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
                 >
                   <option>Agriculture</option>
@@ -64,6 +109,7 @@ export default function ChallengeAccept() {
                     type="text"
                     name="title"
                     id="title"
+                    onChange={(e) => setTitle(e.target.value)}
                     autoComplete="title"
                     className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                     placeholder=""
@@ -81,6 +127,7 @@ export default function ChallengeAccept() {
                 <textarea
                   id="about"
                   name="about"
+                  onChange={(e) => setSummary(e.target.value)}
                   rows={3}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   defaultValue={''}
@@ -96,6 +143,7 @@ export default function ChallengeAccept() {
                 <textarea
                   id="about"
                   name="about"
+                  onChange={(e) => setDetails(e.target.value)}
                   rows={3}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   defaultValue={''}
@@ -111,6 +159,7 @@ export default function ChallengeAccept() {
                 <textarea
                   id="about"
                   name="about"
+                  onChange={(e) => setImpact(e.target.value)}
                   rows={3}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   defaultValue={''}
@@ -133,10 +182,16 @@ export default function ChallengeAccept() {
                       htmlFor="file-upload"
                       className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
                     >
-                      <span>Upload a file</span>
-                      <input id="file-upload" name="file-upload" type="file" className="sr-only" />
+                      <span>Upload file link</span>
+                      <input
+                    type="text"
+                    name="image"
+                    id="image"
+                    onChange={(e) => setImage(e.target.value)}
+                    className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                    placeholder=""
+                  />
                     </label>
-                    <p className="pl-1">or drag and drop</p>
                   </div>
                   <p className="text-xs leading-5 text-gray-600">PNG, JPG, GIF up to 10MB</p>
                 </div>

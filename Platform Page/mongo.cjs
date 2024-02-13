@@ -133,15 +133,41 @@ const TechnologySchema=new mongoose.Schema({
     }
 })
 
+const ChallengeSchema=new mongoose.Schema({
+    email:{
+        type:String
+    },
+    sector:{
+        type:String
+    },
+    title:{
+        type:String
+    },
+    summary:{
+        type:String
+    },
+    details:{
+        type:String
+    },
+    impact:{
+        type:String
+    },
+    image:{
+        type:String
+    }
+})
+
 
 const collection = mongoose.model("collection",loginSchema)
 const GC = mongoose.model("GC", GCSchema)
 const Project = mongoose.model("Project", ProjectSchema)
 const Technology = mongoose.model("Technology", TechnologySchema)
+const Challenge = mongoose.model("Challenge", ChallengeSchema)
 
 module.exports = {
     collection: collection,
     GC: GC,
     Project: Project,
-    Technology: Technology
+    Technology: Technology,
+    Challenge: Challenge
 };
