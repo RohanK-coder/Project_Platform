@@ -53,12 +53,12 @@ const GCSchema=new mongoose.Schema({
     },
     village:{
         type:String
-    },reference:{
+    },
+    reference:{
         type:String
     },express:{
         type:String
     },
-
 })
 
 const ProjectSchema=new mongoose.Schema({
@@ -120,6 +120,12 @@ const TechnologySchema=new mongoose.Schema({
         type:String
     },
     resources:{
+        type:String
+    },
+    reference:{
+        type:String
+    },
+    express:{
         type:String
     },
     webArticles:{
