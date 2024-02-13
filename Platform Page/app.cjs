@@ -1,6 +1,6 @@
 const express = require("express")
 const jwt = require("jsonwebtoken");
-const { collection, GC } = require("./mongo.cjs")
+const { collection, GC, Project, Technology } = require("./mongo.cjs")
 const cors = require("cors")
 const app = express()
 app.use(express.json())

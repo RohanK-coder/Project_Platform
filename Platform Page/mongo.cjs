@@ -53,14 +53,89 @@ const GCSchema=new mongoose.Schema({
     },
     village:{
         type:String
+    },reference:{
+        type:String
+    },express:{
+        type:String
     },
+
+})
+
+const ProjectSchema=new mongoose.Schema({
+    name:{
+        type:String
+    },
+    imageUrl:{
+        type:String
+    },
+    category:{
+        type:String
+    },
+    type:{
+        type:String
+    },
+    startDate:{
+        type:String
+    },
+    endDate:{
+        type:String
+    },
+    status:{
+        type:String
+    },
+    content:{
+        type:String
+    }
+})
+
+const TechnologySchema=new mongoose.Schema({
+    provider:{
+        type:String
+    },
+    imageUrl:{
+        type:String
+    },
+    location:{
+        type:String
+    },
+    affiliated:{
+        type:String
+    },
+    solutionType:{
+        type:String
+    },
+    sector:{
+        type:String
+    },
+    website:{
+        type:String
+    },
+    projectLifeCycle:{
+        type:String
+    },
+    generalDetails:{
+        type:String
+    },
+    impact:{
+        type:String
+    },
+    resources:{
+        type:String
+    },
+    webArticles:{
+        type:String
+    }
 })
 
 
 const collection = mongoose.model("collection",loginSchema)
 const GC = mongoose.model("GC", GCSchema)
+const Project = mongoose.model("Project", ProjectSchema)
+const Technology = mongoose.model("Technology", TechnologySchema)
 
 module.exports = {
     collection: collection,
-    GC: GC
+    GC: GC,
+    Project: Project,
+    Technology: Technology
 };
