@@ -92,9 +92,6 @@ const TechnologySchema=new mongoose.Schema({
     provider:{
         type:String
     },
-    imageUrl:{
-        type:String
-    },
     location:{
         type:String
     },
@@ -122,15 +119,12 @@ const TechnologySchema=new mongoose.Schema({
     resources:{
         type:String
     },
-    reference:{
-        type:String
-    },
-    express:{
-        type:String
-    },
     webArticles:{
         type:String
-    }
+    },
+    webArticlesURL:{
+        type:String
+    },
 })
 
 const ChallengeSchema=new mongoose.Schema({
