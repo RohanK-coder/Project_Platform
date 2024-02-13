@@ -13,6 +13,7 @@ import Home from './pages/Home';
 import Navigation from './Navigation';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/my';
+import ChallengeAccept from './components/ChallengeAccept/ChallengeAccept';
 
 export default function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -38,6 +39,7 @@ export default function App() {
           <Route path="/post-challenges" element={<Chal />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path='/challenge-post' element={<ChallengeAccept/>}/>
           <Route
             path="/details/:id"
             element={authenticated ? <GCInsideLogin /> : <GCInsideNoLogin />}

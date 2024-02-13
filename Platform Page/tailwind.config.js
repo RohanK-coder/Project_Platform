@@ -8,6 +8,6 @@ module.exports = withMT({
   theme: {
     extend: {},
   },
-  plugins: [require('flowbite/plugin'),require("tailgrids/plugin"),],
+  plugins: [require('flowbite/plugin'),require('@tailwindcss/forms'),],
 });
 

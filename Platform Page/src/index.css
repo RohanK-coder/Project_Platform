@@ -761,5 +761,91 @@ font-size: larger;
   background-size: cover;
 }
 
+.post-challenge{
+  display: flex;
+  width: auto;
+  height: 50vh;
+  
+  
+  opacity: 90%;
+}
+.post1{
+  width: 50%;
+  height: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #003262;
+  flex-direction: column;
+  color: white;
+  
+}
+.post2{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: black;
+  
+}
+.App {
+	
+	font-weight:1000;
+	font-size: 20px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: auto;
+  height: 20vh;
+  margin: 80px;
+	
+}
+.tw1{
+  color: white;
+  margin-bottom: 20px;
+}
+.tw2{
+  margin-bottom: 20px;
+  color: yellowgreen;
+}
+.tw3{
+  color: #fbbf24;
+}
+.post2 button{
+  border: 2px solid white;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: large;
+  font-weight: 800;
+  color: white;
+}
+.post2 button:hover{
+  font-size: 1.5em;
+}
+
+.chal-accept{
+  
+  width: auto;
+  height: auto;
+  padding-left: 40px;
+  padding-top: 40px;
+  padding-right: 40px;
+
+}
+.chal-accept h1{
+  font-size: xx-large;
+  font-weight: 800;
+}
+
+
+
 
 
