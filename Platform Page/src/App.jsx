@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 import Footer from './Footer';
@@ -11,6 +11,7 @@ import GCInsideLogin from './components/Grand Challenges/GCPageInsideLogin';
 import Chal from './pages/Chal';
 import Home from './pages/Home';
 import Navigation from './Navigation';
+import NavigationOnLogin from './NavigationOnLogin';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/my';
 import ChallengeAccept from './components/ChallengeAccept/ChallengeAccept';
@@ -29,9 +30,10 @@ export default function App() {
   return (
     <>
       <BrowserRouter>
-        <Navigation />
+        {authenticated ? <NavigationOnLogin /> : <Navigation />}
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Navigate to="/" />} />
           <Route path="/grand-challenges" element={<GC />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/technologies" element={<Technologies />} />
