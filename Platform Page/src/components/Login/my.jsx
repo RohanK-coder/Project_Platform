@@ -31,18 +31,20 @@ function Login() {
     }
 
     return (
+    <section className="log">
         <div className="login">
-            <h1>Login</h1>
+            <h3 className='heading-community'>Smart Village.GENAI</h3>
             <form onSubmit={submit}>
-                <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
-                <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" />
-                <button type="submit">Login</button>
+                <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="mb-5"/> <br />
+                <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" /> <br />
+                <button type="submit" className="mt-7 ">Login</button>
             </form>
             <br />
-            <p>OR</p>
-            <br />
-            <Link to="/signup">Signup Page</Link>
+            <p>If you don't have an account</p>
+            
+            <Link to="/signup" className="link">Signup</Link>
         </div>
+    </section>
     );
 }
 
