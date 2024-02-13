@@ -7,25 +7,25 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
-app.post("/login",async(req,res)=>{
-    const{email,password}=req.body
-    try{
-        const check=await collection.findOne({email:email,password:password})
-        
-        if(check){
+app.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const check = await collection.findOne({ email: email, password: password });
+
+        if (check) {
             const mail = { email };
             const accessToken = jwt.sign(mail, 'your-secret-key');
-            console.log(accessToken)
-            res.json({ accessToken });
+            console.log(accessToken);
+            
+            res.json({ status: "exist", accessToken: accessToken });
+        } else {
+            res.json({ status: "notexist" });
         }
-        else{
-            res.json("notexist")
-        }
+    } catch (e) {
+        res.json({ status: "fail" });
     }
-    catch(e){
-        res.json("fail")
-    }
-})
+});
+
 
 app.post("/signup", async (req, res) => {
     const { username, email, password } = req.body;

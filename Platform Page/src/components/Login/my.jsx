@@ -15,10 +15,13 @@ function Login() {
                 email,
                 password
             });
+            console.log(response);
 
-            if (response.data === "exist") {
-                history("/home", { state: { id: email } });
-            } else if (response.data === "notexist") {
+            if (response.data.status === "exist") {
+                console.log("HI");
+                localStorage.setItem('accessToken', response.data.accessToken);
+                history("/", { state: { id: email } });
+            } else if (response.data.status === "notexist") {
                 alert("User has not signed up");
             }
         } catch (error) {
