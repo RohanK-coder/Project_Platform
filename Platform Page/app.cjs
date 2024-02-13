@@ -1,6 +1,6 @@
 const express = require("express")
 const jwt = require("jsonwebtoken");
-const { collection, GC, Project, Technology, Challenge } = require("./mongo.cjs")
+const { collection, GC, Project, Technology, Challenge, Collaborator } = require("./mongo.cjs")
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -32,7 +32,7 @@ app.post('/api/challenges', async (req, res) => {
   try {
     const newChallenge = new Challenge({
       email,
-      sector, // Update to sector instead of country
+      sector, 
       title,
       summary,
       details,
@@ -80,6 +80,34 @@ app.get("/api/details", async (req, res) => {
       res.status(500).json("error");
     }
   });
+
+app.get("/api/technologies", async (req, res) => {
+    try {
+      const details = await Technology.find();
+      res.json(details);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json("error");
+    }
+});
+
+app.get("/api/technologies/:id", async (req, res) => {
+  const challengeId = req.params.id;
+  console.log(challengeId);
+ 
+  try {
+    const details = await Technology.findById(challengeId);
+
+    if (!details) {
+      return res.status(404).json({ error: "Technology not found" });
+   }
+ 
+   res.json(details);
+   } catch (error) {
+     console.error(error);
+     res.status(500).json({ error: "Internal server error" });
+   }
+ });
   
 app.get("/api/details/:id", async (req, res) => {
    const challengeId = req.params.id;
@@ -97,6 +125,35 @@ app.get("/api/details/:id", async (req, res) => {
       res.status(500).json({ error: "Internal server error" });
     }
   });
+
+
+app.get("/api/collab", async (req, res) => {
+    try {
+      const details = await Collaborator.find();
+      res.json(details);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json("error");
+    }
+});
+
+app.get("/api/collab/:id", async (req, res) => {
+  const challengeId = req.params.id;
+  console.log(challengeId);
+ 
+  try {
+    const details = await Collaborator.findById(challengeId);
+
+    if (!details) {
+      return res.status(404).json({ error: "Collaborator not found" });
+   }
+ 
+   res.json(details);
+   } catch (error) {
+     console.error(error);
+     res.status(500).json({ error: "Internal server error" });
+   }
+ });
 
 
 app.listen(8000,()=>{

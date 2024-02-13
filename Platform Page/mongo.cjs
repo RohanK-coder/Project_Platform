@@ -92,9 +92,7 @@ const TechnologySchema=new mongoose.Schema({
     provider:{
         type:String
     },
-    imageUrl:{
-        type:String
-    },
+    image:String,
     location:{
         type:String
     },
@@ -122,15 +120,12 @@ const TechnologySchema=new mongoose.Schema({
     resources:{
         type:String
     },
-    reference:{
-        type:String
-    },
-    express:{
-        type:String
-    },
     webArticles:{
         type:String
-    }
+    },
+    webArticlesURL:{
+        type:String
+    },
 })
 
 const ChallengeSchema=new mongoose.Schema({
@@ -157,7 +152,21 @@ const ChallengeSchema=new mongoose.Schema({
     }
 })
 
+const CollaborateSchema=new mongoose.Schema({
+    image:String,
+    name:String,
+    organization:String,
+    persona:String,
+    website:String,
+    location:String,
+    sectors:String,
+    businessProfile:String,
+    collaborator:String,
+    technology:String
+})
 
+
+const Collaborator=mongoose.model("Collaborator", CollaborateSchema)
 const collection = mongoose.model("collection",loginSchema)
 const GC = mongoose.model("GC", GCSchema)
 const Project = mongoose.model("Project", ProjectSchema)
@@ -169,5 +178,6 @@ module.exports = {
     GC: GC,
     Project: Project,
     Technology: Technology,
-    Challenge: Challenge
+    Challenge: Challenge,
+    Collaborator: Collaborator,
 };

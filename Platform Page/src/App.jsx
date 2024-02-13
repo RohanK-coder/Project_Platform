@@ -8,6 +8,8 @@ import Technologies from './pages/Technologies';
 import Collaborate from './pages/Collaborate';
 import GCInsideNoLogin from './components/Grand Challenges/GCInsideNoLogin';
 import GCInsideLogin from './components/Grand Challenges/GCPageInsideLogin';
+import TechInsideLogin from './components/Technologies/TechInsideLogin';
+import InsideCollab from './components/Collaborate/InsideCollab';
 import Chal from './pages/Chal';
 import Home from './pages/Home';
 import Navigation from './Navigation';
@@ -48,6 +50,12 @@ export default function App() {
             path="/details/:id"
             element={authenticated ? <GCInsideLogin /> : <GCInsideNoLogin />}
           />
+          <Route
+            path="/technologies/:id"
+            element={<TechInsideLogin />}/>
+          <Route
+            path="/collab/:id"
+            element={<InsideCollab />}/>
         </Routes>
         <Footer />
       </BrowserRouter>
