@@ -43,8 +43,12 @@ export default function GCPage() {
   ));
 
   return (
+    <>
+    <div className='back-img'>
+        <h3 className='page-heading'>Grand Challenges</h3>
+    </div>
     <div className="container mx-auto">
       <ul className='flex align-center justify-center flex-wrap w-15'>{listItems}</ul>
-    </div>
+    </div></>
   );
 }

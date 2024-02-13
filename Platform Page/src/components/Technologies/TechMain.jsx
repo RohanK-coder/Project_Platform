@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-export default function GCPage() {
+export default function TechMain() {
   const [details, setDetails] = useState([]);
 
   useEffect(() => {
@@ -17,10 +17,11 @@ export default function GCPage() {
   }, []);
 
   const listItems = details.map(detail => (
+    
     <li key={detail._id}>
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mr-10 mb-10 mt-10">
         <Link to={`/technologies/${detail._id}`}>
-          <img className="rounded-t-lg" src={detail.imageUrl} alt="" />
+          <img className="rounded-t-lg" src={detail.image} alt="image" />
         </Link>
         <div className="p-5">
           <Link to={`/technologies/${detail._id}`}>
@@ -42,8 +43,12 @@ export default function GCPage() {
   ));
 
   return (
+    <>
+    <div className='back-img'>
+        <h3 className='page-heading'>Technologies</h3>
+    </div>
     <div className="container mx-auto">
       <ul className='flex align-center justify-center flex-wrap w-15'>{listItems}</ul>
-    </div>
+    </div></>
   );
 }
