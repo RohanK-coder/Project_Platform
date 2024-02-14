@@ -92,7 +92,9 @@ const TechnologySchema=new mongoose.Schema({
     provider:{
         type:String
     },
-    image:String,
+    image:{
+        type:String
+    },
     location:{
         type:String
     },

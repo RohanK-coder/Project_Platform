@@ -49,6 +49,7 @@ export default function TechInsideLogin() {
       <div className='flex items-center justify-center h-20 font-bold '>
         <h5>{challengeData.provider}</h5>
       </div>
+      <img className="rounded-t-lg" src={challengeData.image} alt="image" />
 
       <div className='flex flex-wrap items-center justify-between mb-16 mr-10 ml-10'>
         <div><b>Website:</b> {challengeData.webArticlesURL}</div>
