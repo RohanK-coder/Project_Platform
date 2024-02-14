@@ -192,7 +192,24 @@ const CollaborateSchema=new mongoose.Schema({
     technology:String
 })
 
+const villageSchema=new mongoose.Schema({
+    name:String,
+    image:String,
+    location:String,
+    companies:String,
+    status:String,
+    team:String,
+    about:String,
+    folder:String,
+})
 
+const activitySchema=new mongoose.Schema({
+    name:String,
+    date:String,
+})
+
+const Village =mongoose.model("Village", villageSchema)
+const Activity = mongoose.model("Activity", activitySchema)
 const Collaborator=mongoose.model("Collaborator", CollaborateSchema)
 const collection = mongoose.model("collection",loginSchema)
 const GC = mongoose.model("GC", GCSchema)
@@ -202,6 +219,8 @@ const Challenge = mongoose.model("Challenge", ChallengeSchema)
 const ProjectComponent = mongoose.model("ProjectComponent", ProjectComponentSchema)
 
 module.exports = {
+    Village:Village,
+    Activity:Activity,
     collection: collection,
     GC: GC,
     Project: Project,

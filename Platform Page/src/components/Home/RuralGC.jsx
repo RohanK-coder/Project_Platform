@@ -18,13 +18,13 @@ export default function CardSlider() {
         <div className="w-3/4 m-auto">
           <div className="mt-20 ">
             <Slider {...settings}>
-              {data.map((d, i) => (
+              {data1.map((d, i) => (
                 <div
                   className="bg-yellow h-[450px] text-black rounded-xl"
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={data.img} alt="" className="h-44 w-44" />
+                    <img src={data1.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -42,13 +42,13 @@ export default function CardSlider() {
         <div className="w-3/4 m-auto">
           <div className="mt-20 ">
             <Slider {...settings}>
-              {data.map((d, i) => (
+              {data2.map((d, i) => (
                 <div
                   className="bg-yellow h-[450px] text-black rounded-xl"
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={data.img} alt="" className="h-44 w-44" />
+                    <img src={data2.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -66,7 +66,7 @@ export default function CardSlider() {
         <div className="w-3/4 m-auto">
           <div className="mt-20 ">
             <Slider {...settings}>
-              {data.map((d, i) => (
+              {data3.map((d, i) => (
                 <div
                   className="bg-yellow h-[450px] text-black rounded-xl"
                   key={i}
@@ -90,13 +90,13 @@ export default function CardSlider() {
         <div className="w-3/4 mr-auto ml-auto">
           <div className="mt-20 mb-0">
             <Slider {...settings}>
-              {data.map((d, i) => (
+              {data4.map((d, i) => (
                 <div
                   className="bg-yellow h-[450px] text-black rounded-xl"
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={data.img} alt="" className="h-44 w-44" />
+                    <img src={data4.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
