@@ -3,7 +3,13 @@ import slider from './slider-1.jpg';
 import slider2 from './slider-2.jpg';
 import slider3 from './slider-3.jpg';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 export function CarouselWithContent() {
+  const navigate = useNavigate();
+  const navigateToValue = () => {
+        
+    navigate('/value-proposition'); 
+  };
   return (
     <Carousel className="xl">
       <div className="relative h-full w-full">
@@ -50,10 +56,10 @@ export function CarouselWithContent() {
               You Can Help Solve Global Rural Challenges
             </Typography>
             <div className="flex justify-center gap-10 mb-10">
-              <Button size="rounded-lg" color="yellow" text-color="teal">
+              <Button size="rounded-lg" color="yellow" text-color="teal" >
                 Collaborate
               </Button>
-              <Button size="rounded-lg" color="yellow">
+              <Button size="rounded-lg" color="yellow" onClick={navigateToValue}>
                 Value proposition
               </Button>
               <Button size="rounded-lg" color="yellow">
@@ -104,7 +110,7 @@ export function CarouselWithContent() {
               <Button size="rounded-lg" color="yellow" text-color="teal">
                 Collaborate
               </Button>
-              <Button size="rounded-lg" color="yellow">
+              <Button size="rounded-lg" color="yellow" onClick={navigateToValue}>
                 Value proposition
               </Button>
               <Button size="rounded-lg" color="yellow">
@@ -154,7 +160,7 @@ export function CarouselWithContent() {
               <Button size="rounded-lg" color="yellow" text-color="teal">
                 Collaborate
               </Button>
-              <Button size="rounded-lg" color="yellow">
+              <Button size="rounded-lg" color="yellow" onClick={navigateToValue}>
                 Value proposition
               </Button>
               <Button size="rounded-lg" color="yellow">

@@ -449,7 +449,7 @@
 .back-img{
   background-image: url('src/assets/background.jpg');
   
-  height: 400px;
+  height: 200px;
   width: auto;
   display: flex;
   align-items: center;
@@ -467,6 +467,12 @@
     
     width: auto;
     height: auto;
+  }
+  .pageHeading{
+    color: white;
+    font-size: large;
+    font-weight: 800;
+
   }
 
 .dov{
@@ -880,7 +886,20 @@ font-size: larger;
   font-size: large;
 }
 
+.content{
+  border: 5px solid red;
+  width:80%;
+  display: flex;
+  height: auto;
+  padding-bottom: 30px;
+  flex-direction: column;
 
-
+  
+}
+.value-prop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 

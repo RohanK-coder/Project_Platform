@@ -17,6 +17,7 @@ import NavigationOnLogin from './NavigationOnLogin';
 import Signup from './components/Signup/Signup';
 import Login from './components/Login/my';
 import ChallengeAccept from './components/ChallengeAccept/ChallengeAccept';
+import VP from './components/Value Proposition/VP';
 
 export default function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -44,6 +45,7 @@ export default function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path='/challenge-post' element={<ChallengeAccept/>}/>
+          <Route path='/value-proposition' element={<VP/>}/>
           <Route
             path="/details/:id"
             element={authenticated ? <GCInsideLogin /> : <GCInsideNoLogin />}
