@@ -24,7 +24,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={data.img} alt="" className="h-44 w-44" />
+                    <img src={d.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -48,7 +48,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={data.img} alt="" className="h-44 w-44" />
+                    <img src={d.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -72,7 +72,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={data.img} alt="" className="h-44 w-44" />
+                    <img src={d.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -96,7 +96,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={data.img} alt="" className="h-44 w-44" />
+                    <img src={d.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -118,17 +118,17 @@ export default function CardSlider() {
 const data = [
   {
     name: 'Srinaini',
-    img: {Pic1},
+    img: "https://res.cloudinary.com/duad230uy/image/upload/v1707885862/Technologies/hukpbliiqbbsz4ez5is7.png",
     review: 'Lorem ipsum dolor',
   },
   {
     name: 'Srinaini',
-    img: {Pic1},
+    img: "https://res.cloudinary.com/duad230uy/image/upload/v1707885862/Technologies/hukpbliiqbbsz4ez5is7.png",
     review: 'Lorem ipsum dolor',
   },
   {
     name: 'Srinaini',
-    img: {Pic1},
+    img: "https://res.cloudinary.com/duad230uy/image/upload/v1707885862/Technologies/hukpbliiqbbsz4ez5is7.png",
     review: 'Lorem ipsum dolor',
   },
 ];
