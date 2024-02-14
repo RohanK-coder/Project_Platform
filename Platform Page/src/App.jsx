@@ -18,6 +18,8 @@ import Signup from './components/Signup/Signup';
 import Login from './components/Login/my';
 import ChallengeAccept from './components/ChallengeAccept/ChallengeAccept';
 import VP from './components/Value Proposition/VP';
+import ResearchProject from './components/Projects/ResearchProject';
+import ResearchProjectComp from './components/Projects/ResearchProjectComponent';
 
 export default function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -56,6 +58,12 @@ export default function App() {
           <Route
             path="/collab/:id"
             element={<InsideCollab />}/>
+          <Route
+            path="/research-project/:id"
+            element={<ResearchProject />}/>
+          <Route
+            path="/research-project/comp/:id"
+            element={<ResearchProjectComp />}/>
         </Routes>
         <Footer />
       </BrowserRouter>

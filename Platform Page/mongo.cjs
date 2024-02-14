@@ -107,6 +107,9 @@ const ProjectComponentSchema=new mongoose.Schema({
     status:{
         type:String
     },
+    content:{
+        type:String
+    }
 
 })
 
