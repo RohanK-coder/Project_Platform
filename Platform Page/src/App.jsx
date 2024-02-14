@@ -5,6 +5,7 @@ import Footer from './Footer';
 import GC from './pages/GC';
 import ResearchProjects from './pages/ResearchProjects';
 import UniversityProjects from './pages/UniversityProjects';
+import VillageProjects from './pages/VillageProjects';
 import Technologies from './pages/Technologies';
 import Collaborate from './pages/Collaborate';
 import GCInsideNoLogin from './components/Grand Challenges/GCInsideNoLogin';
@@ -43,6 +44,7 @@ export default function App() {
           <Route path="/grand-challenges" element={<GC />} />
           <Route path="/research-projects" element={<ResearchProjects />} />
           <Route path="/university-projects" element={<UniversityProjects />} />
+          <Route path="/village-projects" element={<VillageProjects />} />
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/collaborate" element={<Collaborate />} />
           <Route path="/post-challenges" element={<Chal />} />
