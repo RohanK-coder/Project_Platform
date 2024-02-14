@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Navbar,
   MobileNav,
@@ -9,23 +10,16 @@ import {
   MenuList,
   MenuItem,
   Avatar,
-  Card,
-  IconButton,
 } from "@material-tailwind/react";
 import {
   CubeTransparentIcon,
   UserCircleIcon,
-  CodeBracketSquareIcon,
-  Square3Stack3DIcon,
-  ChevronDownIcon,
   Cog6ToothIcon,
-  InboxArrowDownIcon,
   LifebuoyIcon,
   PowerIcon,
-  RocketLaunchIcon,
-  Bars2Icon,
+  ChevronDownIcon,
 } from "@heroicons/react/24/solid";
- 
+
 // profile menu component
 const profileMenuItems = [
   {
@@ -36,7 +30,6 @@ const profileMenuItems = [
     label: "Edit Profile",
     icon: Cog6ToothIcon,
   },
-  
   {
     label: "Help",
     icon: LifebuoyIcon,
@@ -46,10 +39,20 @@ const profileMenuItems = [
     icon: PowerIcon,
   },
 ];
-export default function Navigation() {
+
+export default function NavigationOnLogin() {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
- 
-  const closeMenu = () => setIsMenuOpen(false)
+
+  const closeMenu = () => setIsMenuOpen(false);
+
+  const handleSignOut = () => {
+    localStorage.removeItem("accessToken");
+    navigate("/");
+    window.location.reload();
+    closeMenu();
+  };
+
   return (
     <>
     <nav className="navbar">
@@ -100,34 +103,35 @@ export default function Navigation() {
         </Button>
       </MenuHandler>
       <MenuList className="p-1">
-        {profileMenuItems.map(({ label, icon }, key) => {
-          const isLastItem = key === profileMenuItems.length - 1;
-          return (
-            <MenuItem
-              key={label}
-              onClick={closeMenu}
-              className={`flex items-center gap-2 rounded ${
-                isLastItem
-                  ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
-                  : ""
-              }`}
-            >
-              {React.createElement(icon, {
-                className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""}`,
-                strokeWidth: 2,
+              {profileMenuItems.map(({ label, icon }, key) => {
+                const isLastItem = key === profileMenuItems.length - 1;
+                return (
+                  <MenuItem
+                    key={label}
+                    onClick={label === "Sign Out" ? handleSignOut : closeMenu}
+                    className={`flex items-center gap-2 rounded ${
+                      isLastItem
+                        ? "hover:bg-red-500/10 focus:bg-red-500/10 active:bg-red-500/10"
+                        : ""
+                    }`}
+                  >
+                    {React.createElement(icon, {
+                      className: `h-4 w-4 ${isLastItem ? "text-red-500" : ""}`,
+                      strokeWidth: 2,
+                    })}
+                    <Typography
+                      as="span"
+                      variant="small"
+                      className="font-normal"
+                      color={isLastItem ? "red" : "inherit"}
+                    >
+                      {label}
+                    </Typography>
+                  </MenuItem>
+                );
               })}
-              <Typography
-                as="span"
-                variant="small"
-                className="font-normal"
-                color={isLastItem ? "red" : "inherit"}
-              >
-                {label}
-              </Typography>
-            </MenuItem>
-          );
-        })}
-      </MenuList>
+            </MenuList>
+
     </Menu>
       </div>
       

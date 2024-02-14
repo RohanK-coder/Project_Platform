@@ -65,13 +65,37 @@ const ProjectSchema=new mongoose.Schema({
     name:{
         type:String
     },
+    folder:{
+        type:String
+    },
+    imageUrl:{
+        type:String
+    },
+    type:{
+        type:String
+    },
+    createdAt:{
+        type:String
+    },
+})
+
+const ProjectComponentSchema=new mongoose.Schema({
+    folder:{
+        type:String
+    },
+    name:{
+        type:String
+    },
     imageUrl:{
         type:String
     },
     category:{
         type:String
     },
-    type:{
+    sector:{
+        type:String
+    },
+    projectType:{
         type:String
     },
     startDate:{
@@ -83,16 +107,16 @@ const ProjectSchema=new mongoose.Schema({
     status:{
         type:String
     },
-    content:{
-        type:String
-    }
+
 })
 
 const TechnologySchema=new mongoose.Schema({
     provider:{
         type:String
     },
-    image:String,
+    image:{
+        type:String
+    },
     location:{
         type:String
     },
@@ -172,6 +196,7 @@ const GC = mongoose.model("GC", GCSchema)
 const Project = mongoose.model("Project", ProjectSchema)
 const Technology = mongoose.model("Technology", TechnologySchema)
 const Challenge = mongoose.model("Challenge", ChallengeSchema)
+const ProjectComponent = mongoose.model("ProjectComponent", ProjectComponentSchema)
 
 module.exports = {
     collection: collection,
@@ -180,4 +205,5 @@ module.exports = {
     Technology: Technology,
     Challenge: Challenge,
     Collaborator: Collaborator,
+    ProjectComponent: ProjectComponent
 };
