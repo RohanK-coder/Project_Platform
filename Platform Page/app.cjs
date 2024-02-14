@@ -1,6 +1,6 @@
 const express = require("express")
 const jwt = require("jsonwebtoken");
-const { collection, GC, Project, Technology, Challenge, Collaborator } = require("./mongo.cjs")
+const { collection, GC, Project, Technology, Challenge, Collaborator, ProjectComponent } = require("./mongo.cjs")
 const cors = require("cors")
 const app = express()
 app.use(express.json())
@@ -81,6 +81,16 @@ app.post("/signup", async (req, res) => {
 app.get("/api/details", async (req, res) => {
     try {
       const details = await GC.find();
+      res.json(details);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json("error");
+    }
+  });
+
+  app.get("/api/research-project", async (req, res) => {
+    try {
+      const details = await Project.find();
       res.json(details);
     } catch (error) {
       console.error(error);

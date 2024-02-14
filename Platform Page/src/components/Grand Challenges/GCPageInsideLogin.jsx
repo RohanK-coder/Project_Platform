@@ -61,7 +61,7 @@ export default function GCPageInsideLogin() {
       <div className='flex items-center justify-center h-20 font-bold '>
         {challengeData.title}
       </div>
-
+      <img className="rounded-t-lg" src={challengeData.imageUrl} alt="" />
       <div className='flex flex-wrap items-center justify-between mb-16 mr-10 ml-10'>
         <div><b>Sector:</b> {challengeData.sector}</div>
         <div><b>Keywords:</b> {challengeData.keywords}</div>
