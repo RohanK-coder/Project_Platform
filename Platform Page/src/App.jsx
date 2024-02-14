@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react';
 
 import Footer from './Footer';
 import GC from './pages/GC';
-import Projects from './pages/Projects';
+import ResearchProjects from './pages/ResearchProjects';
+import UniversityProjects from './pages/UniversityProjects';
 import Technologies from './pages/Technologies';
 import Collaborate from './pages/Collaborate';
 import GCInsideNoLogin from './components/Grand Challenges/GCInsideNoLogin';
@@ -40,7 +41,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/home" element={<Navigate to="/" />} />
           <Route path="/grand-challenges" element={<GC />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/research-projects" element={<ResearchProjects />} />
+          <Route path="/university-projects" element={<UniversityProjects />} />
           <Route path="/technologies" element={<Technologies />} />
           <Route path="/collaborate" element={<Collaborate />} />
           <Route path="/post-challenges" element={<Chal />} />
@@ -58,6 +60,7 @@ export default function App() {
           <Route
             path="/collab/:id"
             element={<InsideCollab />}/>
+          
           <Route
             path="/research-project/:id"
             element={<ResearchProject />}/>
