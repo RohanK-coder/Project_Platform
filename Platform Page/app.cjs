@@ -98,6 +98,38 @@ app.get("/api/details", async (req, res) => {
     }
   });
 
+  app.get("/api/research-project/:id", async (req, res) => {
+    try {
+      const det = await Project.find();
+      const details = await ProjectComponent.find({ file: det.file })
+
+      res.json(details);
+    } catch (error) {
+      console.error(error);
+      res.status(500).json("error");
+    }
+  });
+
+  app.get("/api/research-project/comp/:id", async (req, res) => {
+    const challengeId = req.params.id;
+    console.log(challengeId);
+   
+    try {
+      const details = await ProjectComponent.findById(challengeId);
+  
+      if (!details) {
+        return res.status(404).json({ error: "Technology not found" });
+     }
+   
+     res.json(details);
+     } catch (error) {
+       console.error(error);
+       res.status(500).json({ error: "Internal server error" });
+     }
+   });
+
+
+
 app.get("/api/technologies", async (req, res) => {
     try {
       const details = await Technology.find();
