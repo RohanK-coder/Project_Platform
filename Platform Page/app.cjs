@@ -26,6 +26,13 @@ app.post("/login", async (req, res) => {
     }
 });
 
+app.post("/logout", (req, res) => {
+  localStorage.removeItem("accessToken");
+  
+  res.redirect("/");
+});
+
+
 app.post('/api/challenges', async (req, res) => {
   const { email, sector, title, summary, details, impact, image } = req.body;
 
