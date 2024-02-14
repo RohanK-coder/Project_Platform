@@ -14,9 +14,11 @@ export default function VP() {
         <h1 className='text-xl mt-7'><b>Delivering Sustainable Solutions For Rural Challenges</b></h1>
         <p className='m-100'>Smart Village Movement Platform is a dynamic digital space where experts from academia, government and corporations and SVM Team come together to co-innovate to solve grand challenges of rural emerging economies.</p>
       </div>
-      <div className='veed'>
-        <div className='veed1'>hello</div>
-        <div className='veed1'>hello</div>
+      <div className='ved'>
+        <div className='ved1'>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/LbiJ_9W7UHM?si=pU69yDyVEwm5CZQg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div className='ved1'></div>
       </div>
     </div>
       

@@ -86,7 +86,7 @@ export default function NavigationOnLogin() {
         <div id="dash" className='navbar-content'><a href="/dashboard">Dashboard</a></div>
         <div id="post" className='navbar-content'><a href="/post-challenges">Post a Challenge</a></div>
         <div className='search'>
-          <input type="text" placeholder='Search' /></div>          
+          <input type="search" placeholder='Search' /></div>          
         
       
       {/*Code for Dropdown*/} 

@@ -921,4 +921,15 @@ font-size: larger;
   border-radius: 10px;
   background-color: black;
 }
-
+.ved{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.ved1{
+  border: 5px solid pink;
+  width: 50%;
+  height: 325px;
+  
+  
+}
