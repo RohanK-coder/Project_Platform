@@ -20,10 +20,10 @@ export default function GCPage() {
 
   const listItems = details.map(detail => (
     <li key={detail._id}>
-      <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mr-10 mb-10 mt-10">
+      <div className="max-w-sm w-60  bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mr-10 mb-10 mt-10">
         <Link to={`/details/${detail._id}`}>
           {/* Use Link instead of 'a' tag, and pass the detail id in the URL */}
-          <img className="rounded-t-lg" src={detail.imageUrl} alt="" />
+          <img className="rounded-t-lg w-60 h-40" src={detail.imageUrl} alt="" />
         </Link>
         <div className="p-5">
           <Link to={`/details/${detail._id}`}>
