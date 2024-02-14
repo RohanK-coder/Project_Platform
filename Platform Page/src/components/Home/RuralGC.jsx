@@ -1,4 +1,4 @@
-import Pic from '../../assets/Picture1.png';
+import Pic1 from '../../assets/Grand challenges/1.jpg'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -24,7 +24,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={Pic} alt="" className="h-44 w-44" />
+                    <img src={data.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -48,7 +48,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={Pic} alt="" className="h-44 w-44" />
+                    <img src={data.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -72,7 +72,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={Pic} alt="" className="h-44 w-44" />
+                    <img src={data.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -96,7 +96,7 @@ export default function CardSlider() {
                   key={i}
                 >
                   <div className="h-56 rounded-t-xl flex justify-center items-center">
-                    <img src={Pic} alt="" className="h-44 w-44" />
+                    <img src={data.img} alt="" className="h-44 w-44" />
                   </div>
                   <div className="flex flex-col justify-center items-center gap-4 p-4">
                     <p className="text-xl font-semibold">{d.name}</p>
@@ -118,17 +118,17 @@ export default function CardSlider() {
 const data = [
   {
     name: 'Srinaini',
-    img: { Pic },
+    img: {Pic1},
     review: 'Lorem ipsum dolor',
   },
   {
     name: 'Srinaini',
-    img: { Pic },
+    img: {Pic1},
     review: 'Lorem ipsum dolor',
   },
   {
     name: 'Srinaini',
-    img: { Pic },
+    img: {Pic1},
     review: 'Lorem ipsum dolor',
   },
 ];

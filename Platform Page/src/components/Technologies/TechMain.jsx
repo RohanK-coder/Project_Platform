@@ -21,7 +21,7 @@ export default function TechMain() {
     <li key={detail._id}>
       <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mr-10 mb-10 mt-10">
         <Link to={`/technologies/${detail._id}`}>
-          <img className="rounded-t-lg" src={detail.image} alt="image" />
+          <img className="rounded-t-lg w-60 h-40" src={detail.image} alt="image" />
         </Link>
         <div className="p-5">
           <Link to={`/technologies/${detail._id}`}>
