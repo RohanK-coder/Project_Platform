@@ -5,7 +5,7 @@ export default function Navigation() {
     <>
     <nav className="navbar">
         
-           <div id="Logo" className='navbar-content'>SmartVillage.GENAI</div>
+           <div id="Logo" className='navbar-content'>SmartVillage.GenAI</div>
         
         <div id="prj" className='navbar-content'><a href="/">Home</a></div>
         <div id="gc" className='navbar-content'><a href="/grand-challenges">Grand Challenges</a></div>
@@ -35,8 +35,7 @@ export default function Navigation() {
         <div id="collab" className='navbar-content'><a href="/collaborate">Collaborate</a></div>
         <div id="dash" className='navbar-content'><a href="/dashboard">Dashboard</a></div>
         <div id="post" className='navbar-content'><a href="/post-challenges">Post a Challenge</a></div>
-        <div className='search'>
-          <input type="search" placeholder='Search' /></div>    
+            
         
       <div id="login" className='logeen'><a href="/login">Login</a></div>
       

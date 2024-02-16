@@ -36,8 +36,8 @@ function Login() {
         <div className="login">
             <h3 className='heading-community'>Smart Village.GENAI</h3>
             <form onSubmit={submit}>
-                <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="mb-5"/> <br />
-                <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" /> <br />
+                <input type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="mb-5" required/> <br />
+                <input type="password" onChange={(e) => setPassword(e.target.value)} placeholder="Password" required/> <br />
                 <button type="submit" className="mt-7 ">Login</button>
             </form>
             <br />

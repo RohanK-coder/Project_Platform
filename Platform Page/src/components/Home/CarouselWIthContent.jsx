@@ -39,7 +39,7 @@ export function CarouselWithContent() {
               color="white"
               className="mb-3 text-3xl md:text-4xl lg:text-5xl"
             >
-              Welcome to Smart Village Movement
+              World Of Smart Village.GenAI
             </Typography>
             <Typography
               variant="lead"
@@ -90,7 +90,7 @@ export function CarouselWithContent() {
               color="white"
               className="mb-3 text-3xl md:text-4xl lg:text-5xl"
             >
-              Welcome to Smart Village Movement
+              World Of Smart Village.GenAI
             </Typography>
             <Typography
               variant="lead"
@@ -140,7 +140,7 @@ export function CarouselWithContent() {
               color="white"
               className="mb-3 text-3xl md:text-4xl lg:text-5xl"
             >
-              Welcome to Smart Village Movement
+              World Of Smart Village.GenAI
             </Typography>
             <Typography
               variant="lead"

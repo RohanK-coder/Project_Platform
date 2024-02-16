@@ -1,15 +1,18 @@
 import Logo from './assets/Logo.png';
+import { Carousel, Typography, Button } from '@material-tailwind/react';
 export default function Footer() {
   return (
     <>
       <footer className="bg-indigo-950 text-white dark:bg-gray-900 border-y-2">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
-            <div className="mb-6 md:mb-0">
-              <a href="/" className="flex items-center">
-                <img src={Logo} className="h-70 w-80 me-0" alt="SVM Logo" />
-              </a>
-            </div>
+          <Typography
+              variant="h1"
+              color="yellow"
+              className="mb-3 text-3xl md:text-4xl lg:text-5xl"
+            >
+              SmartVillage.GenAI
+            </Typography>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
@@ -67,14 +70,7 @@ export default function Footer() {
                       FAQ's
                     </a>
                   </li>
-                  <li className="mb-4">
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline"
-                    >
-                      Community
-                    </a>
-                  </li>
+                  
                   <li className="mb-4">
                     <a
                       href="https://discord.gg/4eeurUVvTy"
