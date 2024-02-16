@@ -17,30 +17,30 @@ export default function Footer() {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/home" className="hover:underline">
                       Home
                     </a>
                   </li>
                   <li className="mb-4">
                     <a
-                      href="https://tailwindcss.com/"
+                      href="/grand-challenges"
                       className="hover:underline"
                     >
                       Challenges
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/projects" className="hover:underline">
                       Projects
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/technologies" className="hover:underline">
                       Tech Partners
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/collaborate" className="hover:underline">
                       Collaboarate
                     </a>
                   </li>
