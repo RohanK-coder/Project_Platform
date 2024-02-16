@@ -1004,3 +1004,10 @@ font-size: larger;
 .community{
   background-image: url('./assets/Community.jpg');
 }
+.express-interest{
+  border: 2px solid grey;
+  color: white;
+  background-color: #003262;
+  padding: 5px 10px;
+  border-radius: 10px;
+}

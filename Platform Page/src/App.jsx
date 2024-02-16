@@ -24,6 +24,7 @@ import ResearchProject from './components/Projects/ResearchProject';
 import ResearchProjectComp from './components/Projects/ResearchProjectComponent';
 import VillageProjectComp from './components/Projects/VillageProjectComponent';
 import VillageProject from './components/Projects/VillageProject';
+import ExpressInterest from './components/Grand Challenges/ExpressInterest';
 
 export default function App() {
   const [authenticated, setAuthenticated] = useState(false);
@@ -54,6 +55,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path='/challenge-post' element={<ChallengeAccept/>}/>
           <Route path='/value-proposition' element={<VP/>}/>
+          <Route path='/express-interest' element = {<ExpressInterest/>}></Route>
           <Route
             path="/details/:id"
             element={authenticated ? <GCInsideLogin /> : <GCInsideNoLogin />}

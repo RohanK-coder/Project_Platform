@@ -8,8 +8,13 @@ import {
   TabPanel,
   TabsHeader,
 } from "@material-tailwind/react";
+import { useNavigate } from 'react-router-dom';
 
 export default function GCPageInsideLogin() {
+  const navigatetoExpressInterest = useNavigate();
+  function handleClick(){
+    navigatetoExpressInterest('/login')
+  }
   const { id } = useParams();
   const [challengeData, setChallengeData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -58,7 +63,7 @@ export default function GCPageInsideLogin() {
       <div className='flex flex-wrap items-center justify-between mb-10 mt-10 mr-10 ml-10'>
         <div><b>Sector:</b> {challengeData.sector}</div>
         <div><b>Keywords:</b> {challengeData.keywords}</div>
-        <div><b>Followed by :</b> {challengeData.followedBy}</div>
+        <div><button className='express-interest' onClick={handleClick}>Express Interest</button></div>
       </div>
 
       <div className='tabs-gc'>

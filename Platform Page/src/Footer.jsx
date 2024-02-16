@@ -2,7 +2,7 @@ import Logo from './assets/Logo.png';
 export default function Footer() {
   return (
     <>
-      <footer className="bg-indigo-950 text-white dark:bg-gray-900">
+      <footer className="bg-indigo-950 text-white dark:bg-gray-900 border-y-2">
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
@@ -17,30 +17,30 @@ export default function Footer() {
                 </h2>
                 <ul className="text-gray-500 dark:text-gray-400 font-medium">
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/home" className="hover:underline">
                       Home
                     </a>
                   </li>
                   <li className="mb-4">
                     <a
-                      href="https://tailwindcss.com/"
+                      href="/grand-challenges"
                       className="hover:underline"
                     >
                       Challenges
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/projects" className="hover:underline">
                       Projects
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/technologies" className="hover:underline">
                       Tech Partners
                     </a>
                   </li>
                   <li className="mb-4">
-                    <a href="https://flowbite.com/" className="hover:underline">
+                    <a href="/collaborate" className="hover:underline">
                       Collaboarate
                     </a>
                   </li>
