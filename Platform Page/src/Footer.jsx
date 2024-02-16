@@ -62,23 +62,8 @@ export default function Footer() {
                       About the Platform
                     </a>
                   </li>
-                  <li className="mb-4">
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline"
-                    >
-                      FAQ's
-                    </a>
-                  </li>
                   
-                  <li className="mb-4">
-                    <a
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline"
-                    >
-                      Contact Us
-                    </a>
-                  </li>
+                  
                 </ul>
               </div>
               <div>

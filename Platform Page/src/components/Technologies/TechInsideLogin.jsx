@@ -38,7 +38,7 @@ export default function TechInsideLogin() {
   }
 
   const tabsArray = [
-    { label: 'General Detils', value: 'generalDetails', desc: challengeData.generalDetails },
+    { label: 'General Details', value: 'generalDetails', desc: challengeData.generalDetails },
     { label: 'Impact', value: 'impact', desc: challengeData.impact },
     { label: 'Resources', value: 'resources', desc: challengeData.resources },
     { label: 'Web Artciles', value: 'webArticles', desc: challengeData.webArticles },
@@ -68,7 +68,7 @@ export default function TechInsideLogin() {
       <div className='tabs-gc'>
         {tabsArray.length > 0 && (
           <Tabs id="custom-animation" value={id}>
-            <TabsHeader>
+            <TabsHeader className='bg-blue-900 ml-10 mr-10'>
             {tabsArray.map(({ label, value }) => (
               <Tab key={value} value={value}>
                 {label}

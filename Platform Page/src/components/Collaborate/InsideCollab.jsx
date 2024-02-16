@@ -59,7 +59,7 @@ export default function InsideCollab() {
       <div className='tabs-gc'>
         {tabsArray.length > 0 && (
           <Tabs id="custom-animation" value={id}>
-            <TabsHeader>
+            <TabsHeader className='bg-blue-900 ml-10 mr-10'>
             {tabsArray.map(({ label, value }) => (
               <Tab key={value} value={value}>
                 {label}
