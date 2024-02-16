@@ -4,7 +4,7 @@ export default function BelowCarousel() {
   return (
     <>
       <section className="sec">
-        <img src="/src/assets/divImage.jpg" alt="" />
+        <img src="https://res.cloudinary.com/duad230uy/image/upload/v1708109854/r9ztl1qfmsg1k7euaeil.jpg" alt="" />
       </section>
     </>
   );
