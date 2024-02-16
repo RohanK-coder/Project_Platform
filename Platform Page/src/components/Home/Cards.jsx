@@ -12,47 +12,47 @@ export default function ProfileCard() {
     {
       name:"Dr. Anil Shah",
       description:"Executive Chairman, Smart Village Movement ",
-      image:"/src/assets/Home_community/Anil.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708061950/govnyrxa1laxhs5nwoxc.jpg",
     },
     {
       name:"Dr. Deepu Raithi",
       description: "Advisor to startups and business development executive ",
-      image:"/src/assets/Home_community/DeepuRathi.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708061991/fybdeioouqri96ct7jco.jpg",
     },
     {
       name:"Prof. Muralikrishna Iyyanki ",
       description: "Professor ",
-      image:"/src/assets/Home_community/Murali.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708062039/va0urinteoi7frvzb9mi.jpg",
     },
     {
       name:"Ms. Anna Fitter ",
       description: "Director of Communication, SVM ",
-      image:"/src/assets/Home_community/Anna-Fitter.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708062064/sctwem4cslojxoitumqt.jpg",
     },
     {
       name:"Mr. Ritesh Tandon ",
       description: "Chief Liaision Officer ",
-      image:"/src/assets/Home_community/Ritesh.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708062096/aaqy6meni7coly2s1qal.jpg",
     },
     {
       name:"Mr. Tulenam Laloo",
       description: "State Lead, Meghalaya",
-      image:"/src/assets/Home_community/Tulenam.jpeg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708062120/uqokm2nupumvlxqdvx78.jpg",
     },
     {
       name:"Mr. Divine Dhakar ",
       description: "Education Lead, SVM Meghalaya ",
-      image:"/src/assets/Home_community/Divine.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708062145/nhvvdhx1gurfjyvoqarw.jpg",
     },
     {
       name:"Miss. Regia Kom",
       description:"Social Media & Marketing Lead",
-      image:"/src/assets/Home_community/Regia.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708062173/ioilgknk0y3nmmq9yzsj.jpg",
     },
     {
       name:"Ms. Alvareen Kharwalang ",
       description: "Healthcare Lead SVM Meghalaya ",
-      image:"/src/assets/Home_community/Alvareen.jpg",
+      image:"https://res.cloudinary.com/duad230uy/image/upload/v1708062207/xbuzlywjkfpnrgqrh8bv.jpg",
     },
     {
       name:"Balahunlang Rapsang ",
