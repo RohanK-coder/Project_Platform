@@ -48,6 +48,7 @@ export default function InsideCollab() {
     <div className='back-img'>
         <h3 className='page-heading'>{challengeData.name}</h3>
       </div>
+      <img className="rounded-t-lg" src={challengeData.image} alt="image" />
 
       <div className='flex flex-wrap items-center justify-between mb-10 mt-10 mr-10 ml-10'>
         <div><b>Organization:</b> {challengeData.organization}</div>

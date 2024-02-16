@@ -74,7 +74,7 @@ export default function ProfileCard() {
       <div className='community'>
          <h1 className='heading-community'>Global Team</h1>
          <div className='darwin'>
-          <div className='image'><img src="/src/assets/darwin.jpg" alt="" width={250}/></div>
+          <div className='image'><img src="https://res.cloudinary.com/duad230uy/image/upload/v1708108798/kgevuynojhtivzfjbthk.jpg" alt="" width={250}/></div>
           <div className='img-des'>
             <h1 className='text-gray-400 text-3xl font-extrabold'>PROF. SOLOMON DARWIN</h1>
             <h3 className='text-white '>Executive Director, Centre for Growth Markets at Centre for Growth Markets, Haas School of Business</h3>
