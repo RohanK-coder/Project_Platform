@@ -1,12 +1,42 @@
-
-import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { PhotoIcon } from '@heroicons/react/24/solid';
+import axios from "axios";
 
 export default function Example() {
+
+  const [title, setTitle] = useState('');
+  const [url, setUrl] = useState('');
+  const [about, setAbout] = useState('');
+
+  async function submit(e) {
+    e.preventDefault();
+  
+    try {
+      const response = await axios.post("https://backend-ijva.onrender.com/api/interest", {
+        title,
+        url,
+        about
+      });
+  
+      if (response.status === 200) {
+        if (response.data.status === "exist") {
+          console.log(response.data);
+        } else if (response.data.status === "success") {
+          alert("Submission successful!");
+        }
+      } else {
+        console.error("Failed to submit challenge");
+      }
+    } catch (error) {
+      console.error("Error submitting challenge:", error);
+    }
+  }
   return (
     
 <>
 <section className='ml-10 mt-10 mb-10'>
-<form>
+<form onSubmit={submit}>
       <div className="space-y-12">
         <div className="border-b border-gray-900/10 pb-12">
           <h2 className="text-base font-semibold leading-7 text-gray-900">Express Your Interest</h2>
@@ -24,6 +54,7 @@ export default function Example() {
                   id="title"
                   name="title"
                   type="title"
+                  onChange={(e) => setTitle(e.target.value)}
                   autoComplete="title"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
@@ -39,6 +70,7 @@ export default function Example() {
                   name="url"
                   type="url"
                   autoComplete="url"
+                  onChange={(e) => setUrl(e.target.value)}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 />
               </div>
@@ -52,6 +84,7 @@ export default function Example() {
                 <textarea
                   id="about"
                   name="about"
+                  onChange={(e) => setAbout(e.target.value)}
                   rows={3}
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                   defaultValue={''}
